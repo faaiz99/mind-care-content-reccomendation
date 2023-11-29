@@ -4,7 +4,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.post("/reccomend", getReccomendations);
-router.get("/", (req, res, next) => {
+router.get("/", (req, res) => {
   res.json({ title: "Mind Care Content Reccomendation API" });
 });
 

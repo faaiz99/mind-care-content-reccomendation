@@ -1,3 +1,4 @@
+/* global process */
 const _ = require("underscore");
 const Vector = require("vector-object");
 const striptags = require("striptags");
@@ -11,7 +12,7 @@ const defaultOptions = {
   maxVectorSize: 100,
   maxSimilarDocuments: Number.MAX_SAFE_INTEGER,
   minScore: 0,
-  debug: true,
+  debug: process.env.DEBUG,
 };
 
 class ContentBasedRecommender {

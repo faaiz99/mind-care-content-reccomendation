@@ -1,3 +1,4 @@
+/* global process */
 const http = require("http");
 const app = require("./src/app.js");
 const port = process.env.PORT;

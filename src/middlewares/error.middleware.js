@@ -1,4 +1,5 @@
-exports.handleError = function (error, req, res, next) {
+/* global process */
+exports.handleError = function (error, res) {
   const statusCode = error.statusCode || 500;
   let message = error.message || "Internal Server Error";
   let stack = process.env.NODE_ENV === "development" ? error.stack : undefined;
