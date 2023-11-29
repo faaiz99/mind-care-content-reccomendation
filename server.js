@@ -1,5 +1,5 @@
-import http from "http";
-import app from "./src/app.js"
+const http = require("http");
+const app = require("./src/app.js");
 const port = process.env.PORT;
 
 const server = http.createServer(app);

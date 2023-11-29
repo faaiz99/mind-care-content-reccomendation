@@ -1,19 +1,17 @@
-import _ from 'underscore';
-import Vector from 'vector-object';
-import striptags from 'striptags';
-import sw from 'stopword';
-import natural from 'natural';
-
+const _ = require('underscore');
+const Vector = require('vector-object');
+const striptags = require('striptags');
+const sw = require('stopword');
+const natural = require('natural');
 
 const { TfIdf, PorterStemmer, NGrams } = natural;
 const tokenizer = new natural.WordTokenizer();
-
 
 const defaultOptions = {
   maxVectorSize: 100,
   maxSimilarDocuments: Number.MAX_SAFE_INTEGER,
   minScore: 0,
-  debug: false,
+  debug: true,
 };
 
 class ContentBasedRecommender {
@@ -316,5 +314,4 @@ class ContentBasedRecommender {
   }
 }
 
-
-export default ContentBasedRecommender;
+module.exports = ContentBasedRecommender;

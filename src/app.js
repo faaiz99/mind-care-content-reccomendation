@@ -1,8 +1,9 @@
-import dotenv from "dotenv";
-import express, { json, urlencoded } from 'express';
-import { reccomendationRouter } from './routes/recommend.js';
-import { handleError } from './middlewares/error.middleware.js';
-import { notFound } from './middlewares/not-found.middleware.js';
+const dotenv = require("dotenv");
+const express = require('express');
+const { json, urlencoded } = express;
+const { reccomendationRouter } = require('./routes/recommend.js');
+const { handleError } = require('./middlewares/error.middleware.js');
+const { notFound } = require('./middlewares/not-found.middleware.js');
 
 dotenv.config();
 
@@ -14,5 +15,4 @@ app.use('/api', reccomendationRouter);
 app.use(handleError)
 app.use(notFound)
 
-
-export default app;
+module.exports = app;

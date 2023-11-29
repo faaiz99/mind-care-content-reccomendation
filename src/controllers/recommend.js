@@ -1,11 +1,14 @@
-import * as recommendService from "../service/recommend.js"
-import { handleResponse } from '../middlewares/response.middleware.js';
-export const getReccomendations = async (req, res) => {
+const recommendService = require("../service/recommend.js");
+const { handleResponse } = require('../middlewares/response.middleware.js');
+
+const getReccomendations = async (req, res) => {
     try {
-        const data = await recommendService.getReccomendations(id);
+        const data = await recommendService.getReccomendations(req.body);
         handleResponse(res, 200, data);
     }
     catch (error) {
         handleResponse(res, 500, error);
     }
 }
+
+module.exports = { getReccomendations };
