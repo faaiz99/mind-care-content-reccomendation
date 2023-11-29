@@ -1,8 +1,8 @@
 var ContentBasedRecommender = require("../content-reccomender/content-based-reccomender.js");
 
 var recommender = new ContentBasedRecommender({
-    minScore: 0.00000000001,
-    maxSimilarDocuments: 100
+  minScore: 0.00000000001,
+  maxSimilarDocuments: 100,
 });
 
 // prepare documents data
@@ -19,21 +19,25 @@ var recommender = new ContentBasedRecommender({
 // ];
 
 var documents = [
-	{
-	  id: '6506d0002b0186f152fe5f93',
-	  content: 'Is it possible to use javascript for machine learning?'
-	},
-	{
-	  id: '65561ca31da8bea3836aa896',
-	  content: 'Why studying javascript is fun?'
-	}
-  ]
+  {
+    id: "6506d0002b0186f152fe5f93",
+    content: "Is it possible to use javascript for machine learning?",
+  },
+  {
+    id: "65561ca31da8bea3836aa896",
+    content: "Why studying javascript is fun?",
+  },
+];
 
 // start training
 recommender.train(documents);
 
 //get top 10 similar items to document 1000002
-var similarDocuments = recommender.getSimilarDocuments('6506d0002b0186f152fe5f93', 0, 10);
+var similarDocuments = recommender.getSimilarDocuments(
+  "6506d0002b0186f152fe5f93",
+  0,
+  10,
+);
 
 console.log(similarDocuments);
 

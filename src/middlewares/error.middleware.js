@@ -7,7 +7,8 @@ exports.handleError = function (error, req, res, next) {
     // If the error is not an instance of Error, create a new Error object
     const errorObject = new Error("Internal Server Error");
     message = errorObject.message;
-    stack = process.env.NODE_ENV === "development" ? errorObject.stack : undefined;
+    stack =
+      process.env.NODE_ENV === "development" ? errorObject.stack : undefined;
   }
 
   res.status(statusCode).json({

@@ -1,3 +1,1 @@
-export const getReccomendations = async (content) => {
-    
-}
+export const getReccomendations = async (content) => {};
