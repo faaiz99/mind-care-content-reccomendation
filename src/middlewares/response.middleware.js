@@ -1,5 +1,5 @@
 /* global process */
-exports.handleResponse = function (res, status, data) {
-  if (process.env.NODE_ENV === "production") res.status(status).json(data);
-  else res.status(status).json({ data });
+exports.handleResponse = function (res, status, data, isCached = false) {
+  if (process.env.NODE_ENV === "production") res.status(status).json({ data, isCached });
+  else res.status(status).json({ data, isCached});
 };
