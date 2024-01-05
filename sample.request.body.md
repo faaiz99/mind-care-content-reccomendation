@@ -2,11 +2,11 @@
 "type":"posts",
 "role":"client",
 "trainingDocument" : {
-"_id": "6506d0002b0186f152fe5f93",
+"\_id": "6506d0002b0186f152fe5f93",
 "therapistId": {
 "reInstatement": 0,
 "isBlocked": false,
-"_id": "64a6d4afdc2e12a645392d9a",
+"\_id": "64a6d4afdc2e12a645392d9a",
 "firstName": "Mifra",
 "lastName": "Waseem",
 "email": "mifra@gmail.com",
